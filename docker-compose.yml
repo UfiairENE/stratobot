@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  cloud_coder_bot:
+    container_name: cloud_coder_bot
+    build: .
+    restart: always
+    env_file:
+      - .env
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "https://api.telegram.org/bot$BOT_TOKEN/getMe"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 5s
