@@ -17,7 +17,7 @@ Ensure you have the following installed:
 
 ### Clone the Repository
 ```sh
-$ git clone https://github.com/your-repo/cloud-coder-bot.git
+$ git clone https://github.com/UfiairENE/stratobot.git
 $ cd cloud-coder-bot
 ```
 
