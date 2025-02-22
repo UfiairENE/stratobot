@@ -29,7 +29,7 @@ $ pip install -r requirements.txt
 ## Configuration
 
 ### AI Model Configuration
-The bot uses Mistral-7B-Instruct-v0.3 for AI inference.
+The bot uses [zephyr-7b-beta](https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta) for AI inference.
 
 ### Set Up Environment Variables
 Create a `.env` file in the project root and add:
