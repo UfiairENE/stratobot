@@ -1,0 +1,41 @@
+name: Deploy to Main Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_app:
+    runs-on: [self-hosted, main]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Generate .env file
+        uses: SpicyPizza/create-envfile@v1.3
+        with:
+          envkey_BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          envkey_HF_API_KEY: ${{ secrets.HF_API_KEY }}
+          envkey_API_URL: ${{ secrets.API_URL }} 
+
+
+      - name: Build Docker images
+        run: |
+          docker compose -f docker-compose.yml build          
+          
+  deploy:
+    runs-on: [self-hosted, main]
+    needs:
+      - build_app
+
+    steps:
+      - name: Run Docker images
+        run: |
+          docker compose -f docker-compose.yml up -d --force-recreate --remove-orphans
+      
+      - name: Prune Unused Docker images for space
+        run: |
+          docker system prune -af
+

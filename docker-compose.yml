@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   cloud_coder_bot:
     container_name: cloud_coder_bot

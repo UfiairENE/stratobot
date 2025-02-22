@@ -3,13 +3,13 @@ from aiogram.filters import Command
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from loguru import logger
 
-router = Router()  # ✅ Use Router() in aiogram v3
+router = Router()  
 
-@router.message(Command("start"))  # ✅ Use Command filter
+@router.message(Command("start"))  
 async def start_command(message: types.Message):
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[  # ✅ Correct InlineKeyboardMarkup syntax
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[ 
         [
-            InlineKeyboardButton(text="Deploy on AWS", callback_data="aws_deploy"),
+            InlineKeyboardButton(text="Deploy a Python App on AWS", callback_data="aws_deploy"),
             InlineKeyboardButton(text="Setup Kubernetes", callback_data="k8s_setup")
         ],
         [
