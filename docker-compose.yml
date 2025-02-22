@@ -11,7 +11,7 @@ services:
         max-size: "10m"
         max-file: "3"
     healthcheck:
-      test: ["CMD", "curl", "-f", "https://api.telegram.org/bot$BOT_TOKEN/getMe"]
+      test: ["CMD-SHELL", "curl -f https://api.telegram.org/bot$BOT_TOKEN/getMe || exit 1"]
       interval: 30s
       retries: 3
       start_period: 10s

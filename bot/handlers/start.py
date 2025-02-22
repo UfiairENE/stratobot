@@ -9,7 +9,7 @@ router = Router()
 async def start_command(message: types.Message):
     keyboard = InlineKeyboardMarkup(inline_keyboard=[ 
         [
-            InlineKeyboardButton(text="Deploy a Python App on AWS", callback_data="aws_deploy"),
+            InlineKeyboardButton(text="Deploy on AWS", callback_data="aws_deploy"),
             InlineKeyboardButton(text="Setup Kubernetes", callback_data="k8s_setup")
         ],
         [
