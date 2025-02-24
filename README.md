@@ -39,6 +39,8 @@ API_URL=model_api_url
 HF_API_TOKEN=hugging_face_api_key
 DEEPL_API_KEY=your_deepl_api_key
 DEEPL_TRANSLATE_URL=your_deepl_translate_url
+GRAFANA_USERNAME=your_loki_data_source_username
+GRAFANA_PASSWORD=your_loki_data_source_password
 ```
 
 ## Running the Bot
