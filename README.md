@@ -46,6 +46,15 @@ DEEPL_TRANSLATE_URL=your_deepl_translate_url
 $ python3 bot/main.py
 ```
 
+## Logging & Monitoring
+
+**Grafana Loki**  is used for centralized logging.  
+
+🔗 **[Stratobot Grafana Dashboard](https://stratobotops.grafana.net/)**  
+
+Ensure Promtail is configured correctly to forward logs from Docker containers to Grafana.
+
+
 ## Troubleshooting and Issues Faced
 
 
