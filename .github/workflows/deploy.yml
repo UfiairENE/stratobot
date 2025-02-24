@@ -21,6 +21,8 @@ jobs:
           envkey_API_URL: ${{ secrets.API_URL }} 
           envkey_DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }} 
           envkey_DEEPL_TRANSLATE_URL: ${{ secrets.DEEPL_TRANSLATE_URL }} 
+          envkey_GRAFANA_USERNAME: ${{ secrets.GRAFANA_USERNAME }} 
+          envkey_GRAFANA_PASSWORD: ${{ secrets.GRAFANA_PASSWORD }} 
 
 
 
