@@ -1,4 +1,4 @@
-# Cloud Coder Bot
+# StratoBot
 
 This is a Telegram bot built with `aiogram` that provides expert solutions for cloud-related queries, including AWS deployment, Kubernetes setup, CI/CD configuration, and serverless architectures.
 
@@ -18,7 +18,7 @@ Ensure you have the following installed:
 ### Clone the Repository
 ```sh
 $ git clone https://github.com/UfiairENE/stratobot.git
-$ cd cloud-coder-bot
+$ cd stratobot
 ```
 
 ### Install Dependencies
